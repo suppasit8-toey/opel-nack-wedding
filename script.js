@@ -27,6 +27,17 @@
         const loadingScreen = document.getElementById('loading-screen');
         const envelope = document.getElementById('envelope');
         const tapText = document.getElementById('tap-to-open');
+        const envelopeVideo = document.getElementById('envelope-video');
+        
+        // Force video to load first frame so it's not blank before interaction
+        if (envelopeVideo) {
+            envelopeVideo.currentTime = 0.1;
+            // Safari workaround to force render
+            envelopeVideo.addEventListener('loadeddata', () => {
+                envelopeVideo.currentTime = 0.1;
+            });
+        }
+        
         let isOpened = false;
 
         function openEnvelope() {
