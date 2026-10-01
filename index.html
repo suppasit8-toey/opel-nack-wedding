@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Opel & Nack — Wedding Invitation</title>
+    <meta name="description" content="คุณได้รับเชิญเข้าร่วมงานแต่งงานของ โอเปิ้ล & แน็ก — 20 มีนาคม 2027">
+    <meta name="theme-color" content="#6A4A3C">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Opel & Nack Wedding Invitation">
+    <meta property="og:description" content="ขอเรียนเชิญร่วมเป็นสักขีพยานในความรักของเรา">
+    <meta property="og:image" content="images/รูปปก.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Noto+Sans+Thai:wght@200;300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MAGIC FLASH OVERLAY -->
+    <div id="magic-flash" class="magic-flash"></div>
+
+    <!-- ============================================ -->
+    <!-- ENVELOPE OPENING ANIMATION -->
+    <!-- ============================================ -->
+    <div id="loading-screen" class="loading-screen">
+        <!-- Floating particles background -->
+        <div class="envelope-particles">
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+            <span class="particle"></span>
+        </div>
+
+        <div class="envelope-wrapper">
+            <!-- Envelope Image -->
+            <div class="envelope" id="envelope">
+                <img src="logo/CARD2.png" alt="Envelope" id="envelope-img" class="envelope-static-img">
+            </div>
+
+            <!-- Tap to open text -->
+            <p class="tap-to-open" id="tap-to-open">แตะเพื่อเปิดซอง</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MUSIC TOGGLE -->
+    <!-- ============================================ -->
+    <button id="music-toggle" class="music-toggle" aria-label="Toggle music">
+        <i data-lucide="music" class="music-icon-on"></i>
+        <i data-lucide="music-off" class="music-icon-off" style="display:none"></i>
+    </button>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION DOTS -->
+    <!-- ============================================ -->
+    <nav id="nav-dots" class="nav-dots" aria-label="Section navigation">
+        <button class="nav-dot active" data-section="cover" aria-label="Cover"></button>
+        <button class="nav-dot" data-section="couple" aria-label="Couple"></button>
+        <button class="nav-dot" data-section="countdown" aria-label="Date"></button>
+        <button class="nav-dot" data-section="schedule" aria-label="Schedule"></button>
+
+        <button class="nav-dot" data-section="gallery" aria-label="Gallery"></button>
+        <button class="nav-dot" data-section="rsvp" aria-label="RSVP"></button>
+        <button class="nav-dot" data-section="location" aria-label="Location"></button>
+        <button class="nav-dot" data-section="theme" aria-label="Theme"></button>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- SECTION 1: COVER -->
+    <!-- ============================================ -->
+    <section id="cover" class="section cover-section">
+        <div class="cover-bg">
+            <img src="images/รูปปก.jpg" alt="Wedding Cover" class="cover-img">
+            <div class="cover-overlay"></div>
+        </div>
+        <div class="cover-content">
+            <div class="cover-botanical top" data-aos="fade-down" data-aos-delay="500">
+                <img src="images/botanical.jpg" alt="" class="botanical-img top-botanical">
+            </div>
+            <div class="cover-text" data-aos="fade-up" data-aos-delay="800">
+                <p class="cover-invite">We're Getting Married</p>
+                <img src="logo/logo3_PNG.png" alt="Opel & Nack" class="wedding-logo">
+                <div class="cover-date-line">
+                    <span class="line"></span>
+                    <span class="cover-date">20 . 03 . 2027</span>
+                    <span class="line"></span>
+                </div>
+                <p class="cover-venue">Amior Bistro Cafe</p>
+            </div>
+            <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1500">
+                <span class="scroll-text">เลื่อนลง</span>
+                <div class="scroll-arrow">
+                    <i data-lucide="chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 2: COUPLE INTRODUCTION -->
+    <!-- ============================================ -->
+    <section id="couple" class="section couple-section">
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">The Happy Couple</p>
+                <h2 class="section-title">เจ้าบ่าว & เจ้าสาว</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="heart" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="couple-cards">
+                <!-- Groom -->
+                <div class="couple-card" data-aos="fade-right" data-aos-delay="200">
+                    <div class="couple-photo-frame">
+                        <div class="photo-frame-border"></div>
+                        <img src="images/รูปเดี่ยวเจ้าบ่าว.png" alt="เจ้าบ่าว" class="couple-photo">
+                    </div>
+                    <div class="couple-info">
+                        <p class="couple-role">The Groom</p>
+                        <h3 class="couple-name">แน็ก</h3>
+                        <p class="couple-fullname">ชนาธิป สิงหวรรณกุล</p>
+                    </div>
+                </div>
+
+                <!-- Heart Divider -->
+                <div class="couple-heart-divider" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="heart-circle">
+                        <i data-lucide="heart" class="heart-icon"></i>
+                    </div>
+                </div>
+
+                <!-- Bride -->
+                <div class="couple-card" data-aos="fade-left" data-aos-delay="200">
+                    <div class="couple-photo-frame">
+                        <div class="photo-frame-border"></div>
+                        <img src="images/รูปเดี่ยวเจ้าสาว.png" alt="เจ้าสาว" class="couple-photo">
+                    </div>
+                    <div class="couple-info">
+                        <p class="couple-role">The Bride</p>
+                        <h3 class="couple-name">โอเปิ้ล</h3>
+                        <p class="couple-fullname">ปราณทิพย์ รักษามั่นคง</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 3: DATE & COUNTDOWN -->
+    <!-- ============================================ -->
+    <section id="countdown" class="section countdown-section">
+        <div class="countdown-bg-pattern"></div>
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">Save The Date</p>
+                <h2 class="section-title">วันแห่งความรัก</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="calendar-heart" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="date-display" data-aos="zoom-in" data-aos-delay="200">
+                <div class="date-card">
+                    <p class="date-day-name">วันเสาร์</p>
+                    <div class="date-main">
+                        <span class="date-month">มีนาคม</span>
+                        <span class="date-number">20</span>
+                        <span class="date-year">2027</span>
+                    </div>
+                    <p class="date-time">
+                        <i data-lucide="clock" class="inline-icon"></i>
+                        เวลา 16:00 – 21:00 น.
+                    </p>
+                </div>
+            </div>
+
+            <div class="countdown-timer" data-aos="fade-up" data-aos-delay="400">
+                <p class="countdown-label">นับถอยหลังสู่วันแห่งความสุข</p>
+                <div class="countdown-boxes" id="countdown-timer">
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="cd-days">000</span>
+                        <span class="countdown-unit">วัน</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="cd-hours">00</span>
+                        <span class="countdown-unit">ชั่วโมง</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="cd-minutes">00</span>
+                        <span class="countdown-unit">นาที</span>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-box">
+                        <span class="countdown-number" id="cd-seconds">00</span>
+                        <span class="countdown-unit">วินาที</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 4: SCHEDULE / TIMELINE -->
+    <!-- ============================================ -->
+    <section id="schedule" class="section schedule-section">
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">Wedding Schedule</p>
+                <h2 class="section-title">กำหนดการ</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="clock" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                    <div class="timeline-dot">
+                        <i data-lucide="clipboard-list" class="timeline-dot-icon"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">16:00 น.</span>
+                        <h4 class="timeline-title">ลงทะเบียนเข้างาน</h4>
+                        <p class="timeline-desc">ต้อนรับแขกผู้มีเกียรติและถ่ายภาพร่วมกัน</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="timeline-dot">
+                        <i data-lucide="gem" class="timeline-dot-icon"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">17:00 น.</span>
+                        <h4 class="timeline-title">เข้าสู่ช่วงพิธีการ</h4>
+                        <p class="timeline-desc">
+                            - เปิดตัวบ่าว-สาว (เพลงบรรเลง)<br>
+                            - แลกแหวน (กลางสวน)<br>
+                            - ให้คำมั่นสัญญารัก
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+                    <div class="timeline-dot">
+                        <i data-lucide="utensils" class="timeline-dot-icon"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">18:00 น.</span>
+                        <h4 class="timeline-title">ร่วมรับประทานอาหารเย็น</h4>
+                        <p class="timeline-desc">ฉลองมงคลสมรสพร้อมรับประทานอาหารร่วมกัน</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left" data-aos-delay="400">
+                    <div class="timeline-dot">
+                        <i data-lucide="wine" class="timeline-dot-icon"></i>
+                    </div>
+                    <div class="timeline-card">
+                        <span class="timeline-time">19:00 - 21:00 น.</span>
+                        <h4 class="timeline-title">ร่วมฉลองและเก็บภาพความทรงจำ</h4>
+                        <p class="timeline-desc">
+                            - ประธานขึ้นกล่าวอวยพร<br>
+                            - บ่าวสาวกล่าวขอบคุณแขก<br>
+                            - เสร็จสิ้นพิธีการ
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 5: VIDEO -->
+    <!-- ============================================ -->
+
+    <!-- ============================================ -->
+    <!-- SECTION 6: PHOTO GALLERY -->
+    <!-- ============================================ -->
+    <section id="gallery" class="section gallery-section">
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">Our Memories</p>
+                <h2 class="section-title">แกลเลอรี่</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="image" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-item" data-index="0">
+                    <img src="images/OPEL/คัด/DSC_0075.jpg" alt="Photo 1" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="1">
+                    <img src="images/OPEL/คัด/DSC_0236.jpg" alt="Photo 2" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-wide" data-index="2">
+                    <img src="images/OPEL/คัด/DSC_0159.jpg" alt="Photo 3" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="3">
+                    <img src="images/OPEL/คัด/DSC_0333.jpg" alt="Photo 4" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="4">
+                    <img src="images/OPEL/คัด/DSC_0381.jpg" alt="Photo 5" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item gallery-item-wide" data-index="5">
+                    <img src="images/OPEL/คัด/DSC_0311.jpg" alt="Photo 6" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="6">
+                    <img src="images/OPEL/คัด/DSC_0463.jpg" alt="Photo 7" class="gallery-img" loading="lazy" style="object-position: top;">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="7">
+                    <img src="images/OPEL/คัด/DSC_0212.jpg" alt="Photo 8" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="8">
+                    <img src="images/OPEL/คัด/DSC_0533.jpg" alt="Photo 9" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-index="9">
+                    <img src="images/OPEL/คัด/MTK_0097.jpg" alt="Photo 10" class="gallery-img" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i data-lucide="maximize-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-label="Photo viewer">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+                <i data-lucide="x"></i>
+            </button>
+            <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">
+                <i data-lucide="chevron-left"></i>
+            </button>
+            <button class="lightbox-next" id="lightbox-next" aria-label="Next">
+                <i data-lucide="chevron-right"></i>
+            </button>
+            <div class="lightbox-content">
+                <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 7: RSVP -->
+    <!-- ============================================ -->
+    <section id="rsvp" class="section rsvp-section">
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">Will You Attend?</p>
+                <h2 class="section-title">ตอบรับเข้าร่วมงาน</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="mail-check" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="rsvp-content" data-aos="fade-up" data-aos-delay="200">
+                <p class="rsvp-message">ขอเรียนเชิญแขกทุกท่านร่วมยืนยันการเข้าร่วมงานแต่งงาน<br>เพื่อให้เจ้าภาพสามารถจัดเตรียมที่นั่งและอาหารได้อย่างเหมาะสมค่ะ❣<br><br><b>**หมายเหตุ : กรุณาให้คำตอบภายในวันที่ 9 มกราคม พ.ศ. 2570 ค่ะ**</b></p>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSejG04Bt-6sRKQm4N_RT7ccOAE_CSZJd_N-tEvKSNFmKZIYPA/viewform?usp=header" target="_blank" class="rsvp-submit" style="text-decoration: none;">
+                    <i data-lucide="external-link" class="btn-icon"></i>
+                    คลิกเพื่อกรอกแบบฟอร์มตอบรับ
+                </a>
+
+                <div class="rsvp-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-text">หรือ</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Opel+%26+Nack+Wedding&dates=20270320T090000Z/20270320T140000Z&details=งานแต่งงานของ+โอเปิ้ล+%26+แนค&location=Amior+Bistro+Cafe,+Nonthaburi&sf=true" 
+                   target="_blank" 
+                   class="google-calendar-btn" 
+                   id="add-to-calendar">
+                    <i data-lucide="calendar-plus" class="btn-icon"></i>
+                    เพิ่มลงใน Google Calendar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 8: GOOGLE MAP -->
+    <!-- ============================================ -->
+    <section id="location" class="section location-section">
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">Find Us Here</p>
+                <h2 class="section-title">สถานที่จัดงาน</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="map-pin" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="location-content" data-aos="fade-up" data-aos-delay="200">
+                <div class="location-info">
+                    <div class="venue-card">
+                        <i data-lucide="building-2" class="venue-icon"></i>
+                        <h3 class="venue-name">Amior Bistro Cafe</h3>
+                        <p class="venue-address">อำเภอปากเกร็ด<br>จังหวัดนนทบุรี</p>
+                        <a href="https://maps.app.goo.gl/7oJjCdJDS2UXdFdo8" target="_blank" class="venue-direction-btn">
+                            <i data-lucide="navigation" class="btn-icon"></i>
+                            นำทางด้วย Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.3512!2d100.5176823!3d13.9250772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e285cf495b8d35%3A0x8fadfb67b3e0b56c!2sAmior%20Bistro%20Cafe!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 16px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Wedding Venue Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECTION 9: WEDDING THEME -->
+    <!-- ============================================ -->
+    <section id="theme" class="section theme-section">
+        <div class="section-inner">
+            <div class="section-header" data-aos="fade-up">
+                <p class="section-subtitle">Dress Code</p>
+                <h2 class="section-title">ธีมงาน</h2>
+                <div class="title-ornament">
+                    <span class="ornament-line"></span>
+                    <i data-lucide="palette" class="ornament-icon"></i>
+                    <span class="ornament-line"></span>
+                </div>
+            </div>
+
+            <div class="theme-content" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="theme-name">Warm Earth Tone</h3>
+                <p class="theme-description">
+                    ขอเชิญแขกผู้มีเกียรติแต่งกายด้วยโทนสีตามธีมงาน
+                </p>
+
+                <div class="theme-colors">
+                    <div class="theme-color-item" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="color-swatch" style="background: #A99488;"></div>
+                        <span class="color-name">น้ำตาลเทา</span>
+                    </div>
+                    <div class="theme-color-item" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="color-swatch" style="background: #A2805D;"></div>
+                        <span class="color-name">น้ำตาลอบอุ่น</span>
+                    </div>
+                    <div class="theme-color-item" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="color-swatch" style="background: #A38166;"></div>
+                        <span class="color-name">น้ำตาลซีเปีย</span>
+                    </div>
+                    <div class="theme-color-item" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="color-swatch" style="background: #4A3525;"></div>
+                        <span class="color-name">ซีเปียเข้ม</span>
+                    </div>
+                    <div class="theme-color-item" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="color-swatch" style="background: #6A4A3C;"></div>
+                        <span class="color-name">น้ำตาลเอสเพรสโซ</span>
+                    </div>
+                </div>
+
+                <div class="theme-dresscode">
+                    <div class="dresscode-card" data-aos="fade-right" data-aos-delay="200">
+                        <i data-lucide="shirt" class="dresscode-icon"></i>
+                        <h4>สุภาพบุรุษ</h4>
+                        <p>สูทสีเข้ม, เชิ้ตสีน้ำตาล<br>หรือโทนสีเอิร์ธโทน</p>
+                    </div>
+                    <div class="dresscode-card" data-aos="fade-left" data-aos-delay="300">
+                        <i data-lucide="sparkles" class="dresscode-icon"></i>
+                        <h4>สุภาพสตรี</h4>
+                        <p>ชุดราตรี โทนสีน้ำตาล<br>เทา หรือเอิร์ธโทน</p>
+                    </div>
+                </div>
+
+                <div class="theme-botanical" data-aos="fade-up" data-aos-delay="400">
+                    <img src="images/botanical.jpg" alt="Botanical Theme" class="theme-botanical-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="wedding-footer">
+            <div class="footer-content">
+                <div class="footer-logo-wrapper">
+                    <i data-lucide="flower" class="footer-flower"></i>
+                    <img src="logo/logo3_PNG.png" alt="Opel & Nack" class="footer-logo">
+                    <i data-lucide="flower" class="footer-flower"></i>
+                </div>
+                <p class="footer-date">20 มีนาคม 2027</p>
+                <p class="footer-hashtag">#opelnackwd</p>
+                <div class="footer-hearts">
+                    <i data-lucide="heart"></i>
+                    <i data-lucide="heart"></i>
+                    <i data-lucide="heart"></i>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
