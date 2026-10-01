@@ -33,6 +33,13 @@
             if (isOpened) return;
             isOpened = true;
 
+            // Try to play music automatically on user interaction
+            const bgMusic = document.getElementById('bg-music');
+            if (bgMusic) {
+                bgMusic.volume = 0.5;
+                bgMusic.play().catch(e => console.log('Audio autoplay blocked', e));
+            }
+
             // Hide tap text
             tapText.classList.add('hide');
 
@@ -418,6 +425,32 @@
                 const coupleSection = document.getElementById('couple');
                 if (coupleSection) {
                     coupleSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    }
+
+    // ========================================
+    // MUSIC TOGGLE
+    // ========================================
+    function initMusic() {
+        const musicToggle = document.getElementById('music-toggle');
+        const bgMusic = document.getElementById('bg-music');
+        const iconOn = document.querySelector('.music-icon-on');
+        const iconOff = document.querySelector('.music-icon-off');
+
+        if (musicToggle && bgMusic) {
+            bgMusic.volume = 0.5;
+
+            musicToggle.addEventListener('click', () => {
+                if (bgMusic.paused) {
+                    bgMusic.play();
+                    iconOn.style.display = 'block';
+                    iconOff.style.display = 'none';
+                } else {
+                    bgMusic.pause();
+                    iconOn.style.display = 'none';
+                    iconOff.style.display = 'block';
                 }
             });
         }
