@@ -43,49 +43,43 @@
             // Hide tap text
             tapText.classList.add('hide');
 
-            const envelopeImg = document.getElementById('envelope-img');
-            
-            // Step 1: Slide static image down to align perfectly with GIF's envelope position
-            if (envelopeImg) {
-                envelopeImg.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
-                envelopeImg.style.transform = 'translateY(20px)'; // Adjust this value to match GIF perfectly
+            // Play the WebM video envelope
+            const envelopeVideo = document.getElementById('envelope-video');
+            if (envelopeVideo) {
+                envelopeVideo.play().catch(e => console.log('Video autoplay blocked', e));
+                if (envelope) envelope.classList.add('magical-glow');
             }
 
-            // Step 2: Swap to animated GIF after slide finishes
-            setTimeout(() => {
-                if (envelopeImg) {
-                    envelopeImg.style.transition = 'none'; // Remove transition
-                    envelopeImg.style.transform = 'translateY(0)'; // Reset container position
-                    envelopeImg.src = 'logo/จดหมายขยับได้.gif?t=' + new Date().getTime();
-                }
-
-                // Add magical glow effect
-                if (envelope) {
-                    envelope.classList.add('magical-glow');
-                }
-            }, 400);
-
-            // Step 3: Trigger the magic flash overlay before transition (at 3400ms)
+            // Step 2: Trigger the magic flash overlay (at 3000ms, as the letter comes out)
             const magicFlash = document.getElementById('magic-flash');
             setTimeout(() => {
                 if (magicFlash) {
                     magicFlash.classList.add('active');
                 }
-            }, 3400);
+            }, 3000);
 
-            // Wait for GIF animation to play then fade out loading screen (at 4400ms)
+            // Wait for video animation to finish then fade out envelope (at 4000ms)
             setTimeout(() => {
                 if (envelope) {
                     envelope.style.opacity = '0';
                     envelope.style.transform = 'scale(1.1)';
                 }
-            }, 4400);
+            }, 4000);
 
-            // Step 4: Fade out loading screen and reveal the website (at 4900ms when flash is brightest)
+            // Step 3: Fade out loading screen and reveal the website (at 4600ms when flash is brightest)
             setTimeout(() => {
                 loadingScreen.classList.add('hidden');
                 document.getElementById('cover').classList.add('revealed');
                 
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    if (envelopeVideo) {
+                        envelopeVideo.pause();
+                        envelopeVideo.removeAttribute('src'); // Free memory
+                        envelopeVideo.load();
+                    }
+                }, 1000);
+
                 // Fade out the magic flash to reveal the website
                 if (magicFlash) {
                     magicFlash.classList.remove('active');

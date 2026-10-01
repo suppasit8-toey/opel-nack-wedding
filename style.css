@@ -195,30 +195,28 @@ button {
     100% { transform: scale(0) rotate(180deg); opacity: 0; }
 }
 
-.seal-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 .envelope {
     position: relative;
     width: 340px;
     height: auto;
     max-width: 90vw;
-    perspective: 800px;
-    transition: all 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 10;
     cursor: pointer;
+    transition: all 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.envelope-static-img {
+.envelope-video {
     width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 4px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    filter: drop-shadow(0 15px 40px rgba(0,0,0,0.3));
     transition: filter 1s ease-in-out;
+}
+
+/* Magical Glow when tapped */
+.envelope.magical-glow .envelope-video {
+    animation: magicGlowPulse 1.5s ease-in-out forwards;
 }
 
 /* Magical Glow when tapped */
@@ -1757,12 +1755,19 @@ button {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 12px;
+        display: block;
+        column-count: 3;
+        column-gap: 16px;
+    }
+
+    .gallery-item {
+        margin-bottom: 16px;
+        break-inside: avoid;
+        aspect-ratio: auto;
     }
 
     .gallery-item-wide {
-        grid-column: span 3;
+        aspect-ratio: auto;
     }
 
     .nav-dot {
